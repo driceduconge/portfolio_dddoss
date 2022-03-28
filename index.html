@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𝑫rice 𝑫ucongé 𝒅𝒐𝒔 𝑺antos</title>
+  <link rel="stylesheet" type="text/css" title="Stylesheet" href="style.css">
+</head>
+
+<body>
+  <header><a>Drice Ducongé dos Santos</a><a>contact@dddoss.com</a><a>La Mue</a></header>
+  <div class="projets">
+    <details>
+      <summary>
+        <i>Syowa Auroral Observation</i>, archive book, 2021
+      </summary>
+      <div>Book, 192*260 mm, 364 p. , Laser printed on glossy & recycled, white paper. Handbound ( sewn ), Python, HTML, CSS, Paged.js </div>
+      <div class="slideshow">
+
+        <!-- Don't wrap targets in parent -->
+        <s id="s1"></s>
+        <s id="s2"></s>
+        <s id="s3"></s>
+        <s id="s4"></s>
+
+        <div class="slider">
+          <div loading="lazy" style="background-image:url('images/syowa/DSC_7510.jpg')">
+
+          </div>
+          <div loading="lazy" style="background-image:url('images/syowa/DSC_0511.JPG')">
+          </div>
+          <div loading="lazy" style="background-image:url('images/syowa/DSC_0504.JPG')">
+          </div>
+          <div loading="lazy" style="background-image:url('images/syowa/DSC_0507.jpg')">
+          </div>
+        </div>
+
+        <div class="prevNext">
+          <div><a href="#s4"></a><a href="#s2"></a></div>
+          <div><a href="#s1"></a><a href="#s3"></a></div>
+          <div><a href="#s2"></a><a href="#s4"></a></div>
+          <div><a href="#s3"></a><a href="#s1"></a></div>
+        </div>
+
+
+
+      </div>
+      <div class="slideshow">
+
+        <!-- Don't wrap targets in parent -->
+        <s id="s1b"></s>
+        <s id="s2b"></s>
+        <s id="s3b"></s>
+        <s id="s4b"></s>
+
+        <div class="slider">
+          <div loading="lazy" style="background-image:url('images/syowa/DSC_0519.jpg')">
+
+          </div>
+          <div loading="lazy" style="background-image:url('images/syowa/DSC_0519.jpg')">
+
+          </div>
+          <div loading="lazy" style="background-image:url('images/syowa/DSC_0524.jpg')">
+          </div>
+          <div loading="lazy" style="background-image:url('images/syowa/DSC_0508.JPG')">
+          </div>
+        </div>
+
+        <div class="prevNext">
+          <div><a href="#s4b"></a><a href="#s2b"></a></div>
+          <div><a href="#s1b"></a><a href="#s3b"></a></div>
+          <div><a href="#s2b"></a><a href="#s4b"></a></div>
+          <div><a href="#s3b"></a><a href="#s1b"></a></div>
+        </div>
+
+
+
+      </div>
+    </details>
+    <details>
+      <summary>
+        <i>Tueuse</i>, font specimen, 2021
+      </summary>
+      <div>Rodoid, laser black and white printing, 32p.Archive clip binding. </div>
+    </details>
+    <details>
+      <summary>
+        <i>Tueuse</i>, font specimen, 2021
+      </summary>
+      <div>Rodoid, laser black and white printing, 32p.Archive clip binding. </div>
+    </details>
+  </div>
+</body>
+<script>
+// Fetch all the details element.
+const details = document.querySelectorAll("details");
+
+// Add the onclick listeners.
+details.forEach((targetDetail) => {
+  targetDetail.addEventListener("click", () => {
+    // Close all the details that are not targetDetail.
+    details.forEach((detail) => {
+      if (detail !== targetDetail) {
+        detail.removeAttribute("open");
+      }
+    });
+  });
+});</script>
+</html>
