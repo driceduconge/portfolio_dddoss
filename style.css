@@ -31,7 +31,7 @@ header{
   position: fixed;
   left:33%;
   top:1%;
-  padding-bottom: 0.4%;
+  padding-bottom: 1.8%;
   border-bottom: 1.5px solid var(--black);
   width:66.5%;
   height: 2.5%;
@@ -78,6 +78,11 @@ header a{
 
 .projets details:hover{
   cursor: pointer;
+}
+
+.projet details:hover summary{
+  cursor: pointer;
+
 }
 .projets details summary i{
   color : var(--hilight);
