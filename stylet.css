@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'FPL Neu';
+    src: url('fonts/FPLNeu-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FPL Neu';
+    src: url('fonts/FPLNeu-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+  --background: #DAE0DA;
+  --black: #1C131B;
+  --hilight: #FF00E5;
+}
+
+html{
+  background-color: var(--background);
+  cursor:crosshair;
+
+}
+
+
+header{
+  position: fixed;
+  left:33%;
+  top:1%;
+  padding-bottom: 0.3%;
+  border-bottom: 1.5px solid var(--black);
+  width:66.5%;
+  height: 2.5%;
+  display: flex;
+justify-content:space-between;}
+
+header a{
+  font-family:"FPL Neu";
+  font-style:normal;
+  color:var(--hilight);
+  font-size: 1.1em;
+
+}
+
+.projets{
+  position: fixed;
+  right: 0.5%;
+  top: 4.2%;
+  height: 95.8%;
+  width: 66.5%;
+  overflow: scroll;
+  scrollbar-width: none; /* Firefox */
+-ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.projets::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.projets details{
+  position: relative;
+  margin-top: 1px;
+  margin-left: 58%;
+  margin-right: 0px;
+  text-align: right;
+  color : var(--black);
+  font-family: "FPL Neu";
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+  height: 1.8vh;
+  width: 42%;
+  transition: height 0.2s ease;
+  transition: font-size 0.2s ease;
+}
+
+.projets details:hover{
+  cursor: pointer;
+}
+
+.projet details:hover summary{
+  cursor: pointer;
+
+}
+.projets details summary i{
+  color : var(--hilight);
+
+}
+.projets details summary::marker{
+content:"";
+}
+
+.projets details[open] {
+   height: auto;
+   font-size: 1.5em;
+   line-height: 110%;
+ }
+ .projets details[open] summary{
+    font-size: 1.5em;
+    line-height: 105%;
+
+  }
+
+.projets details .cycle-slideshow{
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  left: 1.5%;
+  bottom: 9%;
+  object-fit: contain;
+  width: 70%;
+  overflow: hidden;
+  height: 80%;
+}
+
+.projets details .cycle-slideshow:hover{
+cursor: crosshair;}
+.projets details[open] .cycle-slideshow{
+  opacity: 1;
+}
+.projets details .cycle-slideshow img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+}
+p{mix-blend-mode: color-burn;
+  position: absolute;
+  top: 1%;
+  left:1%;
+  margin-top: 0px;
+  padding: 0.5%;
+  width:52%;
+  height: auto;
+  overflow-y: scroll;
+  overflow-x: none;
+  text-align: center;
+  line-height: 96%;
+  color: var(--black);
+  font-family:"FPL Neu";
+  font-size: 9.4em;
+  hyphens: auto;
+  scrollbar-width: none; /* Firefox */
+-ms-overflow-style: none;  /* Internet Explorer 10+ */}
+
+p::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.cycle-prev:hover{
+    cursor: w-resize;
+}
+
+.cycle-next:hover {
+    cursor: e-resize;
+}
+
+.cycle-prev, .cycle-next {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  z-index: 800;
+  height: 100%;
+}
+
+  .cycle-next {
+  right: 0;
+}
+/* ------------------------------------- SLIDESHOW --------------------------------------------------------------------*/

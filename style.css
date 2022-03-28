@@ -47,7 +47,7 @@ header a{
 }
 
 .projets{
-  position: absolute;
+  position: fixed;
   right: 0.5%;
   top: 4.2%;
   height: 95.8%;
@@ -111,6 +111,7 @@ content:"";
   opacity: 0%;
   transition: opacity 0.6s ease;
 }
+
 .projets details .slideshow + .slideshow{
   position: fixed;
   left: 3%;
@@ -125,6 +126,31 @@ content:"";
 
   opacity: 100%;
 
+}
+
+p{
+  z-index: 2
+  position: absolute;
+  top: 1%;
+  left:1%;
+  margin-top: 0px;
+  padding: 0.5%;
+  width:48%;
+  height: auto;
+  overflow-y: scroll;
+  overflow-x: none;
+  text-align: center;
+  line-height: 96%;
+  color: var(--black);
+  font-family:"FPL Neu";
+  font-size: 9.6em;
+  hyphens: auto;
+  scrollbar-width: none; /* Firefox */
+-ms-overflow-style: none;  /* Internet Explorer 10+ */}
+
+p::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
 
 /* ------------------------------------- SLIDESHOW --------------------------------------------------------------------*/
@@ -210,8 +236,6 @@ http://stackoverflow.com/a/34696029/383904
 #s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
 #s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
 #s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
-
-.slideshow >s:target ~ .prevNext >* {      visibility: hidden;}
 /* ACTIVE: */
 #s1b:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
 #s2b:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
