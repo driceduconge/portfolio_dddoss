@@ -23,11 +23,18 @@
 html{
   background-color: var(--background);
   cursor:crosshair;
+  scrollbar-width: none; /* Firefox */
+-ms-overflow-style: none;  /* Internet Explorer 10+ */}
 
 }
 
+html::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
 
 header{
+  z-index: 13;
   position: fixed;
   left:33%;
   top:1%;
@@ -43,7 +50,7 @@ header a{
   font-style:normal;
   color:var(--hilight);
   font-size: 1.1em;
-
+  text-decoration: none;
 }
 
 .projets{
@@ -80,25 +87,24 @@ header a{
   cursor: pointer;
 }
 
-.projet details:hover summary{
-  cursor: pointer;
 
-}
 .projets details summary i{
   color : var(--hilight);
 
 }
+
 .projets details summary::marker{
 content:"";
 }
 
 .projets details[open] {
    height: auto;
-   font-size: 1.5em;
+   text-align: left;
+   font-size: 1.9em;
    line-height: 110%;
  }
  .projets details[open] summary{
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 105%;
 
   }
@@ -134,7 +140,7 @@ p{mix-blend-mode: color-burn;
   left:1%;
   margin-top: 0px;
   padding: 0.5%;
-  width:52%;
+  width:73%;
   height: auto;
   overflow-y: scroll;
   overflow-x: none;
@@ -142,7 +148,7 @@ p{mix-blend-mode: color-burn;
   line-height: 96%;
   color: var(--black);
   font-family:"FPL Neu";
-  font-size: 9.4em;
+  font-size: 12.4em;
   hyphens: auto;
   scrollbar-width: none; /* Firefox */
 -ms-overflow-style: none;  /* Internet Explorer 10+ */}
@@ -170,5 +176,16 @@ p::-webkit-scrollbar { /* WebKit */
 
   .cycle-next {
   right: 0;
+}
+
+h4{
+  color: var(--black);
+  font-weight: normal;
+  font-family:"FPL Neu";
+  font-size: 0.8em;
+  margin: 0px;
+  position: fixed;
+  bottom: 1%;
+  right:1%;
 }
 /* ------------------------------------- SLIDESHOW --------------------------------------------------------------------*/
