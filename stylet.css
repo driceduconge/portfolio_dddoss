@@ -1,18 +1,3 @@
-@font-face {
-    font-family: 'FPL Neu';
-    src: url('fonts/FPLNeu-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FPL Neu';
-    src: url('fonts/FPLNeu-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 :root {
   --background: #DAE0DA;
@@ -25,7 +10,7 @@ html{
   cursor:crosshair;
   scrollbar-width: none; /* Firefox */
 -ms-overflow-style: none;  /* Internet Explorer 10+ */}
-
+-webkit-mask-image: -webkit-gradient(linear, left 20%, left bottom, from(var(--black)), to(rgba(0,0,0,0)));
 }
 
 html::-webkit-scrollbar { /* WebKit */
@@ -46,7 +31,7 @@ header{
 justify-content:space-between;}
 
 header a{
-  font-family:"FPL Neu";
+  font-family:serif;
   font-style:normal;
   color:var(--hilight);
   font-size: 1.1em;
@@ -100,41 +85,43 @@ content:"";
 .projets details[open] {
    height: auto;
    text-align: left;
-   font-size: 1.9em;
+   font-size: 1.7em;
    line-height: 110%;
  }
  .projets details[open] summary{
-    font-size: 2em;
+    font-size: 1.75em;
     line-height: 105%;
 
   }
 
-.projets details .cycle-slideshow{
-  text-align: left;
-  display: flex;
-  align-items: flex-start;
+.projets details .images{
   position: fixed;
-  left: 1.5%;
-  bottom: 9%;
-  object-fit: contain;
-  width: 70%;
-  overflow: hidden;
-  height: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 38%;
+  top: 5%;
+  right: 29%;
+  overflow-y: scroll;
+  height: 94%;  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.projets details .images img{
+  position: relative;
+  margin-top: 1%;
+  flex: auto;
+  width: auto;
+  height: auto;
 }
 
-.projets details .cycle-slideshow:hover{
-cursor: crosshair;}
-.projets details[open] .cycle-slideshow{
-  opacity: 1;
+.projets details .images::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
-.projets details .cycle-slideshow img{
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 
-}
-p{mix-blend-mode: color-burn;
+
+
+
+p{
   position: absolute;
   top: 1%;
   left:1%;
@@ -145,43 +132,33 @@ p{mix-blend-mode: color-burn;
   overflow-y: scroll;
   overflow-x: none;
   text-align: center;
-  line-height: 96%;
+  line-height: 90%;
   color: var(--black);
-  font-family:"FPL Neu";
-  font-size: 12.4em;
+  font-family:serif;
+  font-size: 12.3em;
   hyphens: auto;
   scrollbar-width: none; /* Firefox */
--ms-overflow-style: none;  /* Internet Explorer 10+ */}
+-ms-overflow-style: none;  /* Internet Explorer 10+ */   }
 
 p::-webkit-scrollbar { /* WebKit */
     width: 0;
     height: 0;
 }
 
-.cycle-prev:hover{
-    cursor: w-resize;
-}
-
-.cycle-next:hover {
-    cursor: e-resize;
-}
-
-.cycle-prev, .cycle-next {
-  position: absolute;
-  top: 0;
-  width: 30%;
-  z-index: 800;
-  height: 100%;
-}
-
-  .cycle-next {
-  right: 0;
-}
-
 h4{
   color: var(--black);
   font-weight: normal;
-  font-family:"FPL Neu";
+  font-family:serif;
+  font-size: 0.8em;
+  margin: 0px;
+  position: fixed;
+  bottom: 1%;
+  right:1%;
+}
+h4{
+  color: var(--black);
+  font-weight: normal;
+  font-family:serif;
   font-size: 0.8em;
   margin: 0px;
   position: fixed;
