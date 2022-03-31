@@ -59,7 +59,7 @@ header a{
   margin-right: 0px;
   text-align: right;
   color : var(--black);
-  font-family: "FPL Neu";
+  font-family: serif;
   font-size: 1.1em;
   margin-bottom: 0.5em;
   height: 1.8vh;
@@ -206,8 +206,8 @@ h4{
     margin: 0px;
     text-align: center;
     color : var(--black);
-    font-family: "FPL Neu";
-    font-size: 1.1em;
+    font-family: serif;
+    font-size: 1em;
     margin-bottom: 0.5em;
     height: 1.8vh;
     width: 100%;
