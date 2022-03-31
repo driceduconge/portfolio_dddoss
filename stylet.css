@@ -165,4 +165,153 @@ h4{
   bottom: 1%;
   right:1%;
 }
-/* ------------------------------------- SLIDESHOW --------------------------------------------------------------------*/
+/* ------------------------------------- PHONE --------------------------------------------------------------------*/
+@media screen and (max-width: 800px) {
+  header{
+    z-index: 13;
+    position: fixed;
+    left:1%;
+    top:1%;
+    padding-bottom: 0%;
+    border-bottom: 1.5px solid var(--black);
+    width:98%;
+    height:auto;
+    display: flex;
+  justify-content:space-between;}
+
+  header a{
+    font-family:serif;
+    font-style:normal;
+    color:var(--hilight);
+    font-size: 0.8em;
+    text-decoration: none;
+  }
+
+  .projets{
+    position: fixed;
+    right: 1%;
+    top: 3%;
+    height: 95.8%;
+    width: 98%;
+    overflow: scroll;
+    scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+  .projets::-webkit-scrollbar { /* WebKit */
+      width: 0;
+      height: 0;
+  }
+  .projets details{
+    position: relative;
+    margin: 0px;
+    text-align: center;
+    color : var(--black);
+    font-family: "FPL Neu";
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    height: 1.8vh;
+    width: 100%;
+    transition: height 0.2s ease;
+    transition: font-size 0.2s ease;
+  }
+
+
+
+  .projets details summary i{
+    color : var(--hilight);
+
+  }
+
+  .projets details summary::marker{
+  content:"";
+  }
+
+  .projets details[open] {
+     height: auto;
+     text-align: center;
+     font-size: 1.2em;
+     line-height: 110%;
+   }
+   .projets details[open] summary{
+      font-size: 1.2em;
+      line-height: 105%;
+
+    }
+
+  .projets details .images{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    right: 0%;
+    margin-top: 0.5%;
+    overflow-y: scroll;
+    height: 94%;  scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+  .projets details .images img{
+    position: relative;
+    margin-top: 1%;
+    flex: auto;
+    width: auto;
+    height: auto;
+  }
+
+  .projets details .images::-webkit-scrollbar { /* WebKit */
+      width: 0;
+      height: 0;
+  }
+
+
+
+
+  p{
+    display: none;
+    position: absolute;
+    top: 1%;
+    left:1%;
+    margin-top: 0px;
+    padding: 0.5%;
+    width:73%;
+    height: auto;
+    overflow-y: scroll;
+    overflow-x: none;
+    text-align: center;
+    line-height: 90%;
+    color: var(--black);
+    font-family:serif;
+    font-size: 12.3em;
+    hyphens: auto;
+    scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */   }
+
+  p::-webkit-scrollbar { /* WebKit */
+      width: 0;
+      height: 0;
+  }
+
+  h4{
+    background-color: var(--background);
+    color: var(--black);
+    font-weight: normal;
+    font-family:serif;
+    font-size: 0.8em;
+    margin: 0px;
+    padding-top: 0.6em;
+
+    position: fixed;
+    bottom: 1%;
+    width: 100%;
+    text-align: center;
+  }
+  h4{
+    color: var(--black);
+    font-weight: normal;
+    font-family:serif;
+    font-size: 0.8em;
+    margin: 0px;
+    position: fixed;
+    bottom: 1%;
+    right:1%;
+  }
+}
