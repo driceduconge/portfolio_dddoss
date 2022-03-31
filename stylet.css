@@ -166,7 +166,7 @@ h4{
   right:1%;
 }
 /* ------------------------------------- PHONE --------------------------------------------------------------------*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   header{
     z-index: 13;
     position: fixed;
@@ -204,10 +204,11 @@ h4{
   .projets details{
     position: relative;
     margin: 0px;
+    margin-top: 1vh;
     text-align: center;
     color : var(--black);
     font-family: serif;
-    font-size: 1em;
+    font-size: 0.95em;
     margin-bottom: 0.5em;
     height: 1.8vh;
     width: 100%;
@@ -295,23 +296,14 @@ h4{
     color: var(--black);
     font-weight: normal;
     font-family:serif;
-    font-size: 0.8em;
+    font-size: 0.7em;
     margin: 0px;
-    padding-top: 0.6em;
-
+    padding-top: 0.4em;
+    padding-left: 1em;
     position: fixed;
     bottom: 1%;
     width: 100%;
     text-align: center;
   }
-  h4{
-    color: var(--black);
-    font-weight: normal;
-    font-family:serif;
-    font-size: 0.8em;
-    margin: 0px;
-    position: fixed;
-    bottom: 1%;
-    right:1%;
-  }
+
 }
