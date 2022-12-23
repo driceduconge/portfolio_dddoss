@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Site portfolio of Drice Ducongé dos Santos" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="dddoss, graphic, design, studio, porto, france, strasbourg, hear, books, music, art, technology, drice, ducongé, dos santos, graphiste, artiste" />
+  <title>Drice Ducongé dos Santos</title>
+  <link rel="stylesheet" type="text/css" title="Stylesheet" href="stylet.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+  <nav><a href="index.html">projects</a><a href="logs.html">logs</a><a style="color:var(--hilight)">contact</a></nav>
+  <p><em>Drice Ducongé dos Santos</em>,<br>  design, art, music, etc.<BR><BR>
+    Currently @ HEAR Strasbourg<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+    Contact me for work/collabs/stuff<BR><BR>
+    Mail: contact@dddoss.eu<BR>
+    Mast: @dddoss@post.lurk<BR>
+    Inst: @dric_dds<BR>
+  </p>
+  
+</body>
+
+
+<script>
+  // Fetch all the details element.
+  const details = document.querySelectorAll("details");
+
+  // Add the onclick listeners.
+  details.forEach((targetDetail) => {
+    targetDetail.addEventListener("click", () => {
+      // Close all the details that are not targetDetail.
+      details.forEach((detail) => {
+        if (detail !== targetDetail) {
+          detail.removeAttribute("open");
+        }
+      });
+    });
+  });
+</script>
+
+</html>

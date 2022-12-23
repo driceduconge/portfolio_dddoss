@@ -1,8 +1,45 @@
 
+
+@media (prefers-color-scheme: light){
+  :root {
+
+  --background: #e0e7dc;
+--black: #000;
+--hilight: #FF00E5;
+  }
+}
+@media (prefers-color-scheme: dark){
+
 :root {
-  --background: #DAE0DA;
-  --black: #1C131B;
+  --background: #000000;
+  --black: #e0e7dc;
   --hilight: #FF00E5;
+}
+}
+
+@font-face {
+  font-family: "HappyTimes";
+  src: url(/fonts/happy-times-NG_regular_master_web.woff2), format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "HappyTimes";
+  src: url(/fonts/happy-times-NG_italic_master_web.woff2), format("woff2");
+  font-style: italic;
+}
+
+.projets a{
+  color:var(--hilight);
+  text-decoration: none;
+  letter-spacing: 0.0em;
+  transition: letter-spacing 0.3s ease;
+}
+.projets a:hover{
+  letter-spacing: 0.06em;
+}
+.projets a:visited{
+  color: var(--hilight);
+  text-decoration: underline var(--black);
 }
 
 html{
@@ -10,47 +47,87 @@ html{
   cursor:crosshair;
   scrollbar-width: none; /* Firefox */
 -ms-overflow-style: none;  /* Internet Explorer 10+ */}
--webkit-mask-image: -webkit-gradient(linear, left 20%, left bottom, from(var(--black)), to(rgba(0,0,0,0)));
-}
+
+
+
 
 html::-webkit-scrollbar { /* WebKit */
     width: 0;
     height: 0;
 }
 
-header{
+nav{
   z-index: 13;
   position: fixed;
-  left:33%;
-  top:1%;
+  right: 1%;
+  bottom: 9%;
   padding-bottom: 0.3%;
-  border-bottom: 1.5px solid var(--black);
-  width:66.5%;
+  width: 44.5%;
   height: 2.5%;
   display: flex;
-justify-content:space-between;}
+  justify-content: space-between;}
 
-header a{
-  font-family:serif;
-  font-style:normal;
-  color:var(--hilight);
-  font-size: 1.1em;
+
+nav a{
+  font-family: "HappyTimes", serif;
+  font-style: normal;
+  color: var(--black);
+  font-size: 4.1em;
   text-decoration: none;
+  letter-spacing: 0.0em;
+  transition: letter-spacing 0.3s ease;
+  -webkit-touch-callout:auto; /* iOS Safari */
+      -webkit-user-select:auto; /* Safari */
+       -khtml-user-select:auto; /* Konqueror HTML */
+         -moz-user-select:auto; /* Old versions of Firefox */
+          -ms-user-select:auto; /* Internet Explorer/Edge */
+              user-select:auto; /* Non-prefixed version, currently*/
+
 }
 
+header .unstyle{
+  -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+header .unstyle:hover{
+letter-spacing: 0.0em;
+text-decoration: none;
+}
+nav a:hover{
+letter-spacing: 0.06em;
+text-decoration: underline;
+}
 .projets{
   position: fixed;
   right: 0.5%;
-  top: 4.2%;
-  height: 95.8%;
-  width: 66.5%;
+  top: 1.2%;
+    height: 95.8%;
+  width: 112.5%;
   overflow: scroll;
   scrollbar-width: none; /* Firefox */
 -ms-overflow-style: none;  /* Internet Explorer 10+ */
+-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 .projets::-webkit-scrollbar { /* WebKit */
     width: 0;
     height: 0;
+}
+.projets details br{
+  display: none;
+}
+.projets details[open] br{
+  display: block;
 }
 .projets details{
   position: relative;
@@ -59,7 +136,7 @@ header a{
   margin-right: 0px;
   text-align: right;
   color : var(--black);
-  font-family: serif;
+  font-family: "HappyTimes", serif;
   font-size: 1.1em;
   margin-bottom: 0.5em;
   height: 1.8vh;
@@ -77,14 +154,25 @@ header a{
   color : var(--hilight);
 
 }
+.projets details summary {
+  letter-spacing: 0em;
+  transition: all 0.3s ease;
 
+
+}.projets details summary:hover {
+  letter-spacing: 0.03em;
+  transition: all 0.3s ease;
+
+
+}
 .projets details summary::marker{
 content:"";
 }
 
+.projets details summary::-webkit-details-marker {   display:none; }
 .projets details[open] {
    height: auto;
-   text-align: left;
+   text-align: right;
    font-size: 1.7em;
    line-height: 110%;
  }
@@ -99,17 +187,20 @@ content:"";
   display: flex;
   flex-direction: column;
   width: 38%;
-  top: 5%;
-  right: 29%;
+  top: 1.5%;
+  left: 0.5%;
   overflow-y: scroll;
-  height: 94%;  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  height: 100%;
+  scrollbar-width: none;
+}
+.projets details .images:first-child{
+  display: flex;
 }
 .projets details .images img{
   position: relative;
   margin-top: 1%;
   flex: auto;
-  width: auto;
+  width: 100%;
   height: auto;
 }
 
@@ -119,25 +210,34 @@ content:"";
 }
 
 
+p em{
+  color: var(--hilight);
+  font-weight: normal;
+  font-style: normal;
+}
 
-
-p{
-  position: absolute;
-  top: 1%;
-  left:1%;
-  margin-top: 0px;
-  padding: 0.5%;
-  width:73%;
-  height: auto;
-  overflow-y: scroll;
-  overflow-x: none;
-  text-align: center;
-  line-height: 90%;
-  color: var(--black);
-  font-family:serif;
-  font-size: 12.3em;
-  hyphens: auto;
-  scrollbar-width: none; /* Firefox */
+p{-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
+        position: absolute;
+        top: 1%;
+        left: 1%;
+        margin-top: 0px;
+        padding: 0.5%;
+        width: 73%;
+        height: auto;
+        overflow-y: scroll;
+        overflow-x: none;
+        text-align: left;
+        line-height: 90%;
+        color: var(--black);
+        font-family: "HappyTimes", serif;
+        font-size: 3em;
+        hyphens: auto;
+        scrollbar-width: none;
 -ms-overflow-style: none;  /* Internet Explorer 10+ */   }
 
 p::-webkit-scrollbar { /* WebKit */
@@ -148,7 +248,7 @@ p::-webkit-scrollbar { /* WebKit */
 h4{
   color: var(--black);
   font-weight: normal;
-  font-family:serif;
+  font-family:"HappyTimes", serif;
   font-size: 0.8em;
   margin: 0px;
   position: fixed;
@@ -158,39 +258,82 @@ h4{
 h4{
   color: var(--black);
   font-weight: normal;
-  font-family:serif;
+  font-family:"HappyTimes", serif;
   font-size: 0.8em;
   margin: 0px;
   position: fixed;
   bottom: 1%;
   right:1%;
 }
+.columns em{
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+.columns{
+  width: auto;
+  column-fill: auto;
+columns: 15em auto;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+position: absolute;
+top: 1%;
+left: 1%;
+width: 200%;
+height: 87%;
+overflow-y: none;
+overflow-x: scroll;
+text-align: center;
+text-justify: distribute;
+line-height: 129%;
+color: var(--black);
+font-family: "HappyTimes", serif;
+font-size: 1.1em;
+hyphens: none;
+scrollbar-width: none;
+font-family: "HappyTimes", serif;
+}
 /* ------------------------------------- PHONE --------------------------------------------------------------------*/
 @media screen and (max-width: 500px) {
-  header{
-    z-index: 13;
+  .columns{
+    columns: 1;
+    width :90%;
+    left: 5%;overflow-y: scroll;
+    overflow-x: none;
+    height: auto;
+    padding-bottom: 25%;
+    padding-top: 5%;
+  }
+  nav{
+    background-color: var(--background);
+    z-index: 1;
     position: fixed;
-    left:1%;
-    top:1%;
-    padding-bottom: 0%;
-    border-bottom: 1.5px solid var(--black);
-    width:98%;
-    height:auto;
+    left: 0%;
+    bottom: 0%;
+    margin-bottom: 0%;
+    padding-bottom: 2%;
+    width: 96%;
+    height: auto;
     display: flex;
-  justify-content:space-between;}
+    justify-content: space-between;
+    padding-left: 2%;}
 
-  header a{
-    font-family:serif;
+  nav a{
+    font-family:"HappyTimes", serif;
     font-style:normal;
-    color:var(--hilight);
-    font-size: 0.8em;
+    color:var(--black);
+    font-size: 1.8em;
     text-decoration: none;
   }
 
   .projets{
     position: fixed;
     right: 1%;
-    top: 3%;
+    top: 1%;
     height: 95.8%;
     width: 98%;
     overflow: scroll;
@@ -207,7 +350,7 @@ h4{
     margin-top: 1vh;
     text-align: center;
     color : var(--black);
-    font-family: serif;
+    font-family: "HappyTimes", serif;
     font-size: 0.95em;
     margin-bottom: 0.5em;
     height: 1.8vh;
@@ -254,8 +397,9 @@ h4{
     position: relative;
     margin-top: 1%;
     flex: auto;
-    width: auto;
+  width: 100%;
     height: auto;
+
   }
 
   .projets details .images::-webkit-scrollbar { /* WebKit */
@@ -267,21 +411,20 @@ h4{
 
 
   p{
-    display: none;
     position: absolute;
     top: 1%;
     left:1%;
     margin-top: 0px;
-    padding: 0.5%;
-    width:73%;
+    padding: 0%;
+    width:100%;
     height: auto;
     overflow-y: scroll;
     overflow-x: none;
     text-align: center;
-    line-height: 90%;
+    line-height: 105%;
     color: var(--black);
-    font-family:serif;
-    font-size: 12.3em;
+    font-family:"HappyTimes", serif;
+    font-size: 1.7em;
     hyphens: auto;
     scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */   }
@@ -295,7 +438,7 @@ h4{
     background-color: var(--background);
     color: var(--black);
     font-weight: normal;
-    font-family:serif;
+    font-family:"HappyTimes", serif;
     font-size: 0.7em;
     margin: 0px;
     padding-top: 0.4em;
